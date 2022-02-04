@@ -1,0 +1,12 @@
+name: build a management cluster
+on: 
+  workflow_dispatch:
+jobs:
+  build-and-publish:
+    name: make it so
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Build
+      run: .management_cluster.sh
